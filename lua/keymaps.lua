@@ -1,4 +1,4 @@
-function mtrim()
+function M.trim()
   local save = vim.fn.winsaveview()
   vim.cmd("keeppatterns %s/\\s\\+$\\|\\r$//e")
   vim.fn.winrestview(save)
@@ -9,7 +9,7 @@ local options = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 -- Remove ^M when pasted from Window's clipboard
-vim.keymap.set("n", ",m", mtrim, options)
+vim.keymap.set("n", ",m", trim, options)
 
 -- Quickly quit insert mode
 keymap("i", "jk", "<ESC>", options)
