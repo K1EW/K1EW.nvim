@@ -4,7 +4,11 @@ return {
         dependencies = {
             "saadparwaiz1/cmp_luasnip",
             "rafamadriz/friendly-snippets"
-        }
+        },
+        config = function()
+            require("luasnip.loaders.from_vscode").lazy_load()
+            require("luasnip.loaders.from_vscode").lazy_load({ paths = "./snippets" })
+        end
     },
     {
         "hrsh7th/nvim-cmp",
@@ -13,7 +17,6 @@ return {
         },
         config = function()
             local cmp = require("cmp")
-            require("luasnip.loaders.from_vscode").lazy_load()
 
             cmp.setup({
                 snippet = {
