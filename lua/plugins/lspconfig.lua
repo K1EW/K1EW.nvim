@@ -25,6 +25,7 @@ return {
         "neovim/nvim-lspconfig",
         config = function()
             local lspconfig = require("lspconfig")
+            local capabilities = require('cmp_nvim_lsp').default_capabilities()
             local servers = {
                 "clangd",
                 "html",
@@ -41,7 +42,8 @@ return {
                         vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
                         vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
                         vim.keymap.set("n", "<Leader>ca", vim.lsp.buf.code_action, {})
-                    end
+                    end,
+                    capabilities = capabilities,
                 })
             end
         end
