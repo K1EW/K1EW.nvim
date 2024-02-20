@@ -13,6 +13,7 @@ return {
                 "query",
                 "cpp",
                 "html",
+                "http",
                 "json",
                 "python",
                 "typescript",

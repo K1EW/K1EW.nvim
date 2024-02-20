@@ -1,3 +1,13 @@
+local servers = {
+    "clangd",
+    "html",
+    "jsonls",
+    "tsserver",
+    "lua_ls",
+    "pyright",
+    "tailwindcss",
+}
+
 return {
     {
         "williamboman/mason.nvim",
@@ -9,15 +19,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = {
-                    "clangd",
-                    "html",
-                    "jsonls",
-                    "tsserver",
-                    "lua_ls",
-                    "pyright",
-                    "tailwindcss"
-                }
+                ensure_installed = servers
             })
         end
     },
@@ -26,15 +28,6 @@ return {
         config = function()
             local lspconfig = require("lspconfig")
             local capabilities = require('cmp_nvim_lsp').default_capabilities()
-            local servers = {
-                "clangd",
-                "html",
-                "jsonls",
-                "tsserver",
-                "lua_ls",
-                "pyright",
-                "tailwindcss"
-            }
             for _, server in ipairs(servers) do
                 lspconfig[server].setup({
                     on_attach = function()
