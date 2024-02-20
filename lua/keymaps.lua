@@ -9,7 +9,7 @@ local options = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 -- Remove ^M when pasted from Window's clipboard
-vim.keymap.set("n", ",m", MyTrim, options)
+vim.keymap.set("n", "<Leader>^M", MyTrim, options)
 
 -- Quickly quit insert mode
 keymap("i", "jk", "<ESC>", options)
@@ -27,3 +27,14 @@ keymap("n", "<S-h>", ":bprevious<CR>", options)
 -- Move text up and down
 keymap("v", "<A-j>", ":move '>+1<CR>gv-gv", options)
 keymap("v", "<A-k>", ":move '<-2<CR>gv-gv", options)
+
+-- Keep centered when go half page up/down
+keymap("n", "<C-d>", "<C-d>zz", options)
+keymap("n", "<C-u>", "<C-u>zz", options)
+
+-- Reserve register after pasted
+keymap("v", "<Leader>p", "\"_dP", options)
+
+-- Reserve register after delete
+keymap("n", "<Leader>d", "\"_d", options)
+keymap("v", "<Leader>d", "\"_d", options)
