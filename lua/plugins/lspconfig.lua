@@ -27,18 +27,23 @@ return {
         "neovim/nvim-lspconfig",
         config = function()
             local lspconfig = require("lspconfig")
-            local capabilities = require('cmp_nvim_lsp').default_capabilities()
-            for _, server in ipairs(servers) do
-                lspconfig[server].setup({
-                    on_attach = function()
-                        vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-                        vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
-                        vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-                        vim.keymap.set("n", "<Leader>ca", vim.lsp.buf.code_action, {})
-                    end,
-                    capabilities = capabilities,
-                })
-            end
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
+            vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
+            vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
+            vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+            vim.keymap.set("n", "<Leader>ca", vim.lsp.buf.code_action, {})
+
+            lspconfig.clangd.setup({ capabilities = capabilities })
+            lspconfig.html.setup({ capabilities = capabilities})
+            lspconfig.jsonls.setup({ capabilities = capabilities})
+            lspconfig.tsserver.setup({
+                capabilities = capabilities,
+                detached = false,
+                single_file_support = true
+            })
+            lspconfig.lua_ls.setup({ capabilities = capabilities })
+            lspconfig.pyright.setup({ capabilities = capabilities })
+            lspconfig.tailwindcss.setup({ capabilities = capabilities })
         end
     }
 }
