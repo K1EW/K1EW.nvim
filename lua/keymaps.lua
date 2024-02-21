@@ -20,9 +20,10 @@ keymap("n", "<C-j>", "<C-w>j", options)
 keymap("n", "<C-k>", "<C-w>k", options)
 keymap("n", "<C-l>", "<C-w>l", options)
 
+-- ** USING bufferline PLUGIN INSTEAD **
 -- Buffer navigation
-keymap("n", "<S-l>", ":bnext<CR>", options)
-keymap("n", "<S-h>", ":bprevious<CR>", options)
+-- keymap("n", "<S-l>", ":bnext<CR>", options)
+-- keymap("n", "<S-h>", ":bprevious<CR>", options)
 
 -- Move text up and down
 keymap("v", "<A-j>", ":move '>+1<CR>gv-gv", options)
