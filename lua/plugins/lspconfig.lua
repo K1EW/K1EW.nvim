@@ -7,7 +7,6 @@ local servers = {
     "pyright",
     "tailwindcss",
     "marksman",
-    "omnisharp",
 }
 
 return {
