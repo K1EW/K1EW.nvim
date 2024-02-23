@@ -6,6 +6,8 @@ local servers = {
     "lua_ls",
     "pyright",
     "tailwindcss",
+    "marksman",
+    "omnisharp",
 }
 
 return {
