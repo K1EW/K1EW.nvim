@@ -7,7 +7,7 @@
 			"using namespace std;",
 			"",
 			"int main(){",
-			"\t return 0;",
+			"\treturn 0;",
 			"}"
 		],
         "scope": "cpp"
@@ -23,10 +23,20 @@
             "}",
             "",
             "int main(){",
-            "\t int t; cin >> t;",
-            "\t while(t--) { solve(); cout << \"\\n\"; }",
-            "\t return 0;",
+            "\tint t; cin >> t;",
+            "\twhile(t--) { solve(); cout << \"\\n\"; }",
+            "\treturn 0;",
             "}"
+        ],
+        "scope": "cpp"
+    },
+    "leetcode template": {
+        "prefix": "lc",
+        "body": [
+            "#include <bits/stdc++.h>",
+            "",
+            "using namespace std;",
+            ""
         ],
         "scope": "cpp"
     },
