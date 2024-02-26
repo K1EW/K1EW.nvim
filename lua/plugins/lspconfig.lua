@@ -35,7 +35,13 @@ return {
             vim.keymap.set("n", "<Leader>ca", vim.lsp.buf.code_action, {})
             vim.keymap.set('n', '<Leader>dt', vim.diagnostic.open_float, {})
 
-            lspconfig.clangd.setup({ capabilities = capabilities })
+            lspconfig.clangd.setup({
+                capabilities = capabilities,
+                cmd = {
+                    "clangd",
+                    "--header-insertion=never",
+                }
+            })
             lspconfig.html.setup({ capabilities = capabilities})
             lspconfig.jsonls.setup({ capabilities = capabilities})
             lspconfig.tsserver.setup({
