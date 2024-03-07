@@ -66,11 +66,9 @@
             "#define ALL(a) a.begin(), a.end()",
             "#define UNQ(a) a.erase(unique(ALL(a)), a.end())",
             "#define SZ(a) (ll)a.size()",
-            "#define FOR(i, x, y) for(int i=x;i<(y);i++)",
-            "#define FORR(i, y, x) for(int i=(y)-1;i>=x;i--)",
             "#define YESNO(a) cout << ((a) ? \"YES\" : \"NO\")",
             "",
-            "template<typename T> void build_psum (T &data, bool padding = true){ if(padding) data.insert(data.begin(), 0); FOR(i, 1, SZ(data)) data[i] += data[i-1]; }",
+            "template<typename T> void build_psum (T &data, bool padding = true){ if(padding) data.insert(data.begin(), 0); for(int i=1;i<SZ(data);i++) data[i] += data[i-1]; }",
             "template <typename T> typename T::value_type get_sum(const T &data) { typename T::value_type sum = 0; for (auto e : data) sum += e; return sum; }"
         ],
         "scope": "cpp"
