@@ -40,6 +40,20 @@
         ],
         "scope": "cpp"
     },
+    "usaco template": {
+        "prefix": "usc",
+        "body": [
+			"#include<bits/stdc++.h>",
+            "",
+			"using namespace std;",
+			"",
+			"int main(){",
+            "\t// freopen(\"title.in\", \"r\", stdin); freopen(\"title.out\", \"w\", stdout);",
+			"\treturn 0;",
+			"}"
+        ],
+        "scope": "cpp"
+    },
     "competitive base macro": {
         "prefix": "mc",
         "body": [
