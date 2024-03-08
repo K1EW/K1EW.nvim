@@ -4,6 +4,15 @@
             {
                 "language": "cpp",
                 "path": "./cpp.json"
+            },
+            {
+                "language": [
+                    "typescript",
+                    "typescriptreact",
+                    "javascript",
+                    "javascriptreact"
+                ],
+                "path": "./vscode-react.json"
             }
         ]
     }
