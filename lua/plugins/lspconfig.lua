@@ -40,6 +40,7 @@ return {
         lspconfig.pyright.setup({ capabilities = capabilities })
         lspconfig.tailwindcss.setup({ capabilities = capabilities })
         lspconfig.marksman.setup({ capabilities = capabilities })
+        lspconfig.cssls.setup({ capabilities = capabilities })
 
         vim.keymap.set("n", "<Leader>gd", vim.lsp.buf.definition, {})
         vim.keymap.set("n", "<Leader>gr", vim.lsp.buf.references, {})

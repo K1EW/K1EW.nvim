@@ -17,6 +17,7 @@ return {
                     "pyright",
                     "tailwindcss",
                     "marksman",
+                    "cssls",
                 }
             })
         end
