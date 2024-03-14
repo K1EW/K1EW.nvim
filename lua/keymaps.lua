@@ -26,6 +26,10 @@ keymap("v", "<Leader>p", "\"_dP", options)
 keymap("n", "<Leader>d", "\"_d", options)
 keymap("v", "<Leader>d", "\"_d", options)
 
+-- Indentation
+keymap("v", "<", "<gv", options)
+keymap("v", ">", ">gv", options)
+
 -- Remove ^M when pasted from Window's clipboard
 vim.keymap.set("n", "<Leader>^M", function()
     vim.cmd("keeppatterns %s/\\s\\+$\\|\\r$//e")

@@ -12,11 +12,7 @@ return {
                 "--header-insertion=never",
             },
         })
-        lspconfig.tsserver.setup({
-            capabilities = capabilities,
-            detached = false,
-            single_file_support = true
-        })
+        lspconfig.tsserver.setup({ capabilities = capabilities })
         lspconfig.lua_ls.setup({
             capabilities = capabilities,
             settings = {
@@ -35,7 +31,12 @@ return {
                 },
             },
         })
-        lspconfig.html.setup({ capabilities = capabilities })
+        lspconfig.html.setup({
+            capabilities = capabilities,
+            filetypes = {
+                "html", "javascriptreact", "typescriptreact"
+            }
+        })
         lspconfig.jsonls.setup({ capabilities = capabilities })
         lspconfig.pyright.setup({ capabilities = capabilities })
         lspconfig.tailwindcss.setup({ capabilities = capabilities })

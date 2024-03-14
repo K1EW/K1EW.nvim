@@ -13,6 +13,13 @@
                     "javascriptreact"
                 ],
                 "path": "./vscode-react.json"
+            },
+            {
+                "language": [
+                    "typescriptreact",
+                    "javascriptreact"
+                ],
+                "path": "./html.json"
             }
         ]
     }
