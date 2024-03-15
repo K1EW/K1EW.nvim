@@ -23,8 +23,17 @@ keymap("n", "<C-u>", "<C-u>zz", options)
 keymap("v", "<Leader>p", "\"_dP", options)
 
 -- Reserve register after delete
-keymap("n", "<Leader>d", "\"_d", options)
-keymap("v", "<Leader>d", "\"_d", options)
+keymap("n", "d", "\"_d", options)
+keymap("v", "d", "\"_d", options)
+
+-- Reserve register after change
+keymap("n", "ci", "\"_ci", options)
+keymap("n", "ca", "\"_ca", options)
+keymap("v", "c", "\"_c", options)
+
+-- Delete and save to register (cut)
+keymap("n", "<Leader>d", "d", options)
+keymap("v", "<Leader>d", "d", options)
 
 -- Indentation
 keymap("v", "<", "<gv", options)
