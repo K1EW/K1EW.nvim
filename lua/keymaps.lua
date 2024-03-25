@@ -20,7 +20,7 @@ keymap("n", "<C-d>", "<C-d>zz", options)
 keymap("n", "<C-u>", "<C-u>zz", options)
 
 -- Reserve register after pasted
-keymap("v", "<Leader>p", "\"_dP", options)
+keymap("v", "p", "\"_dP", options)
 
 -- Reserve register after delete
 keymap("n", "d", "\"_d", options)
