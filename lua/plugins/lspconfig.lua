@@ -48,5 +48,6 @@ return {
         vim.keymap.set("n", "<Leader>gr", vim.lsp.buf.references, {})
         vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
         vim.keymap.set('n', '<Leader>sdf', vim.diagnostic.open_float, {})
+        vim.keymap.set("n", "<Leader>qf", vim.lsp.buf.code_action, {})
     end
 }
