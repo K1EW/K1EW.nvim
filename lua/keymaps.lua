@@ -2,9 +2,6 @@ vim.g.mapleader = " "
 local options = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
--- Quickly quit insert mode
-keymap("i", "jk", "<ESC>", options)
-
 -- Buffer navigation
 keymap("n", "<S-h>", ":bp<CR>", options)
 keymap("n", "<S-l>", ":bn<CR>", options)
