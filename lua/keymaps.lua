@@ -2,10 +2,6 @@ vim.g.mapleader = " "
 local options = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
--- Buffer navigation
-keymap("n", "<S-h>", ":bp<CR>", options)
-keymap("n", "<S-l>", ":bn<CR>", options)
-
 -- Window navigation
 keymap("n", "<C-h>", "<C-w>h", options)
 keymap("n", "<C-j>", "<C-w>j", options)
