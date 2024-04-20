@@ -40,7 +40,7 @@ return {
         lspconfig.jsonls.setup({ capabilities = capabilities })
         lspconfig.pyright.setup({ capabilities = capabilities })
         -- lspconfig.tailwindcss.setup({ capabilities = tailwindcss_capabilities })
-        lspconfig.marksman.setup({ capabilities = capabilities })
+        -- lspconfig.marksman.setup({ capabilities = capabilities })
         lspconfig.cssls.setup({ capabilities = capabilities })
 
         vim.keymap.set("n", "<Leader>gd", vim.lsp.buf.definition, {})
