@@ -1,2 +1,3 @@
 # K1EW.nvim
-K1EW Neovim configuration
+
+Just my neovim configuration. Ain't nothing much tbh 🤷
