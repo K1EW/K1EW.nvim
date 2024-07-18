@@ -1,0 +1,84 @@
+{
+	"competitive base template": {
+		"prefix": "cp",
+		"body": [
+			"#include <bits/stdc++.h>",
+            "",
+			"using namespace std;",
+			"",
+			"int main(){",
+            "\t$1",
+			"\treturn 0;",
+			"}"
+		],
+        "scope": "cpp"
+	},
+    "codeforces template": {
+        "prefix": "cf",
+        "body": [
+            "#include <bits/stdc++.h>",
+            "",
+
+            "using namespace std;",
+
+            "",
+            "void solve(){",
+            "\t$1",
+            "}",
+            "",
+            "int main(){",
+            "\tint t; cin >> t;",
+            "\twhile(t--) { solve(); cout << \"\\n\"; }",
+            "\treturn 0;",
+            "}"
+
+        ],
+        "scope": "cpp"
+    },
+    "leetcode template": {
+        "prefix": "lc",
+        "body": [
+            "#include <bits/stdc++.h>",
+            "",
+            "using namespace std;",
+            ""
+        ],
+        "scope": "cpp"
+    },
+    "usaco template": {
+        "prefix": "usc",
+        "body": [
+			"#include <bits/stdc++.h>",
+            "",
+			"using namespace std;",
+
+			"",
+			"int main(){",
+            "\t// freopen(\"title.in\", \"r\", stdin); freopen(\"title.out\", \"w\", stdout);",
+            "\t$1",
+			"\treturn 0;",
+			"}"
+        ],
+        "scope": "cpp"
+    },
+    "competitive base macro": {
+        "prefix": "mc",
+        "body": [
+            "using ll = long long;",
+            "using ull = unsigned long long;",
+            "using pii = pair<int,int>;",
+            "template<typename T> using pq = priority_queue<T>;",
+
+            "template<typename T> using pqg = priority_queue<T, vector<T>, greater<T>>;",
+            "",
+            "#define ALL(a) a.begin(), a.end()",
+            "#define UNQ(a) a.erase(unique(ALL(a)), a.end())",
+            "#define SZ(a) (ll)a.size()",
+            "#define YESNO(a) cout << ((a) ? \"YES\" : \"NO\")",
+            "",
+            "template<typename T> void build_psum (T &data, bool padding = true){ if(padding) data.insert(data.begin(), 0); for(int i=1;i<SZ(data);i++) data[i] += data[i-1]; }",
+            "template <typename T> typename T::value_type get_sum(const T &data) { typename T::value_type sum = 0; for (auto e : data) sum += e; return sum; }"
+        ],
+        "scope": "cpp"
+    }
+}
