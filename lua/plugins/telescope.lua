@@ -16,8 +16,8 @@ return {
                 sorting_strategy = "ascending",
                 mappings = {
                     i = {
-                        ["<Tab>"] = actions.move_selection_next,
-                        ["<S-Tab>"] = actions.move_selection_previous
+                        ["<C-n>"] = actions.move_selection_next,
+                        ["<C-p>"] = actions.move_selection_previous
                     }
                 }
             },

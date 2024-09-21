@@ -14,7 +14,6 @@ return {
         event = "VeryLazy",
         dependencies = {
             "L3MON4D3/LuaSnip",
-            "jmbuhr/otter.nvim",
             "hrsh7th/cmp-nvim-lsp",
             "hrsh7th/cmp-path",
             "hrsh7th/cmp-buffer",
@@ -40,11 +39,11 @@ return {
                 mapping = cmp.mapping.preset.insert({
                     -- ["<C-b>"] = cmp.mapping.scroll_docs(-4),
                     -- ["<C-f>"] = cmp.mapping.scroll_docs(4),
-                    ["<Tab>"] = cmp.mapping.select_next_item(),
-                    ["<S-Tab>"] = cmp.mapping.select_prev_item(),
-                    ["<C-Space>"] = cmp.mapping.complete(),
+                    ["<C-n>"] = cmp.mapping.select_next_item(),
+                    ["<C-p>"] = cmp.mapping.select_prev_item(),
+                    -- ["<C-Space>"] = cmp.mapping.complete(),
                     ["<C-c>"] = cmp.mapping.abort(),
-                    ["<CR>"] = cmp.mapping.confirm({ select = true }),
+                    ["<C-Space>"] = cmp.mapping.confirm({ select = true }),
                     ["<C-k>"] = cmp.mapping(function(fallback)
                         if luasnip.expand_or_jumpable() then
                             luasnip.expand_or_jump()
@@ -62,7 +61,6 @@ return {
                 }),
                 sources = cmp.config.sources({
                     { name = "nvim_lsp" },
-                    { name = "otter" },
                     { name = "luasnip" },
                     { name = "path" },
                     { name = "buffer" },

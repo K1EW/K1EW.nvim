@@ -12,6 +12,7 @@ return {
                 "clangd",
                 "pylsp",
                 "tsserver",
+                "ruff_lsp",
             }
         })
     end
