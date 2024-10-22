@@ -8,7 +8,7 @@ return {
             testcases_use_single_file = true,
             compile_command = {
                 cpp = { exec = "g++", args = {"-g", "$(FNAME)", "-o", "out"} },
-                c = { exec = "g", args = {"-g", "$(FNAME)", "-o", "out"} },
+                c = { exec = "gcc", args = {"-g", "$(FNAME)", "-o", "out"} },
             },
             run_command = {
                 cpp = { exec = "./out" },
