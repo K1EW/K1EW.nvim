@@ -11,8 +11,9 @@ return {
                 "lua_ls",
                 "clangd",
                 "pylsp",
-                "tsserver",
-                "ruff_lsp",
+                "ts_ls",
+                "ruff",
+                "tailwindcss"
             }
         })
     end

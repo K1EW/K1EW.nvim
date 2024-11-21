@@ -14,6 +14,12 @@ return {
                 "--header-insertion=never",
             },
         })
+        lspconfig.ts_ls.setup({
+            capabilities = capabilities,
+        })
+        lspconfig.tailwindcss.setup({
+            capabilities = capabilities,
+        })
         lspconfig.lua_ls.setup({
             capabilities = capabilities,
             settings = {
@@ -59,7 +65,7 @@ return {
                 },
             },
         })
-        require("lspconfig").ruff_lsp.setup({
+        require("lspconfig").ruff.setup({
             capabilities = capabilities,
             init_options = {
                 settings = {
