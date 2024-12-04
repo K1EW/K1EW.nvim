@@ -41,7 +41,6 @@ return {
                     -- ["<C-f>"] = cmp.mapping.scroll_docs(4),
                     ["<C-n>"] = cmp.mapping.select_next_item(),
                     ["<C-p>"] = cmp.mapping.select_prev_item(),
-                    -- ["<C-Space>"] = cmp.mapping.complete(),
                     ["<C-c>"] = cmp.mapping.abort(),
                     ["<C-Space>"] = cmp.mapping.confirm({ select = true }),
                     ["<C-k>"] = cmp.mapping(function(fallback)

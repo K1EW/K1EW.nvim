@@ -52,12 +52,15 @@ return {
             settings = {
                 pylsp = {
                     plugins = {
+                        -- pyflakes: Static analysis tool
                         pyflakes = {
                             enabled = false,
                         },
+                        -- mccabe: Complexity checker
                         mccabe = {
                             enabled = false,
                         },
+                        -- pycodestyle: Code style checker
                         pycodestyle = {
                             enabled = false,
                         },
@@ -91,5 +94,6 @@ return {
         vim.keymap.set("n", "K", vim.lsp.buf.hover, options)
         vim.keymap.set("n", "<leader>qf", vim.lsp.buf.code_action, options)
         vim.keymap.set("n", "<leader>sdf", vim.diagnostic.open_float, options)
+        vim.keymap.set("n", "<leader>bf", vim.lsp.buf.format, options)
     end,
 }
