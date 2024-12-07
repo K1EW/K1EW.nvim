@@ -22,6 +22,8 @@ return {
                     "python",
                     "typescript",
                     "javascript",
+                    "markdown",
+                    "markdown_inline",
                 },
                 highlight = {
                     enable = true,

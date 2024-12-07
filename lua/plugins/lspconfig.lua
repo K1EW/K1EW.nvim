@@ -1,14 +1,12 @@
 return {
     "neovim/nvim-lspconfig",
-    event = "BufEnter",
     config = function()
         local lspconfig = require("lspconfig")
-
-        local capabilities = require("cmp_nvim_lsp").default_capabilities()
         local util = require("lspconfig.util")
 
+        local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
         lspconfig.clangd.setup({
-            capabilities = capabilities,
             cmd = {
                 "clangd",
                 "--header-insertion=never",

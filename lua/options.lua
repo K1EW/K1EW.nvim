@@ -25,3 +25,11 @@ vim.opt.termguicolors = true
 vim.opt.showmode = false
 
 vim.opt.hlsearch = false
+
+vim.opt.completeopt = {
+    "menuone",
+    "noinsert",
+    "noselect",
+}
+
+vim.opt.pumheight = 10
