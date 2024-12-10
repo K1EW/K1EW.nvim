@@ -33,3 +33,5 @@ vim.opt.completeopt = {
 }
 
 vim.opt.pumheight = 10
+
+vim.opt.guicursor = "n-v-i-c:block"
