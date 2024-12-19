@@ -60,6 +60,7 @@ return {
 
             vim.keymap.set("n", "<Leader>dc", dap.continue)
             vim.keymap.set("n", "<Leader>dbp", dap.toggle_breakpoint)
+            vim.keymap.set("n", "<Leader>dx", dapui.close)
             vim.keymap.set("n", "<F7>", dap.step_over)
             vim.keymap.set("n", "<F8>", dap.step_into)
         end,
